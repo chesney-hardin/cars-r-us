@@ -1,3 +1,17 @@
+
+
+//create event to capture interior choice
+const changeHandler= (changeEvent) => {
+    if(changeEvent.target.id === "interiors") {
+        const interiorIdChosen = changeEvent.target.value
+        console.log(parseInt(interiorIdChosen))
+    }
+}
+
+//listen for change event
+document.addEventListener("change", changeHandler)
+
+
 //create html for displaying the interiors menu
 export const Interiors = async () => {
     //fetch the interiors data from our local api

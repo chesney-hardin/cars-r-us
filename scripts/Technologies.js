@@ -1,3 +1,17 @@
+
+
+//create change event for technology package chosen
+const changeHandler = (changeEvent) => {
+    if(changeEvent.target.id === "technologies") {
+        const technologyIdChosen = parseInt(changeEvent.target.value)
+        console.log(technologyIdChosen)
+    }
+}
+
+//listen for event
+document.addEventListener("change", changeHandler)
+
+
 //create html for displaying the technologies menu
 export const Technologies = async () => {
     //fetch the technologies data from our local api

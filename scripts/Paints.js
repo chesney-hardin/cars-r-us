@@ -1,4 +1,15 @@
 
+
+//create change event for capturing the paint option chosen
+const changeHandler = (changeEvent) => {
+    if (changeEvent.target.id === "paints") {
+        const paintIdChosen = changeEvent.target.value
+        console.log(parseInt(paintIdChosen))
+    }
+}
+
+document.addEventListener("change", changeHandler)
+
 //create html for displaying the paints menu
 export const Paints = async () => {
     //fetch the paints data from our local api
