@@ -6,6 +6,8 @@ Will probably need to include event listeners to re-render the HTML when changes
 
 import { Interiors } from "./Interiors.js"
 import { Paints } from "./Paints.js"
+import { Technologies } from "./Technologies.js"
+import { Wheels } from "./Wheels.js"
 
 const container = document.querySelector("#container")
 
@@ -16,7 +18,9 @@ const render = async () => {
     //interior drop down
     const interiorsHTML = await Interiors()
     //wheels drop down
+    const wheelsHTML = await Wheels()
     //technologies drop down
+    const technologiesHTML = await Technologies()
     //place order button
     //custom car orders
     const allTheHTML = `
@@ -32,10 +36,12 @@ const render = async () => {
                 ${interiorsHTML}
             </section>
             <section class="choices__wheels menu">
-                <h2>Wheelss</h2>
+                <h2>Wheels</h2>
+                ${wheelsHTML}
             </section>
             <section class="choices__technologies menu">
                 <h2>Technologies</h2>
+                ${technologiesHTML}
             </section>
         </article>
 
