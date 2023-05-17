@@ -1,0 +1,48 @@
+.choices {
+    display: grid;
+    grid: auto auto/ auto auto;
+    
+}
+.menu {
+    padding: 5px 10px 20px 10px;
+    margin: 10px;
+    border: 5px solid blue;
+    border-radius: 5px;
+    background-color: lightgray;
+    color: black;
+
+}
+
+#orderButton {
+    background-color: lightblue;
+    border: 3px solid blue;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: blue;
+    padding: 5px 10px 5px 10px;
+}
+
+.order {
+    padding: 5px 10px 20px 10px;
+    margin: 10px;
+    border: 5px solid lightblue;
+    border-radius: 5px;
+    background-color: lightgray;
+
+}
+
+body {
+    background: linear-gradient(45deg, darkblue 30%, blue 60%, lightblue 40%);
+    font-family: 'Exo 2', sans-serif;
+}
+
+h1, .order-header {
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px darkslategray;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+}

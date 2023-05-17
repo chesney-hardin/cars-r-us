@@ -4,6 +4,7 @@ Don't forget to classify functions as asyn and use keyowrd await when needed
 Will probably need to include event listeners to re-render the HTML when changes are made
 */
 
+import { CustomOrders, PlaceOrder } from "./CustomOrders.js"
 import { Interiors } from "./Interiors.js"
 import { Paints } from "./Paints.js"
 import { Technologies } from "./Technologies.js"
@@ -22,7 +23,12 @@ const render = async () => {
     //technologies drop down
     const technologiesHTML = await Technologies()
     //place order button
+    const orderButton = PlaceOrder()
     //custom car orders
+    const customOrdersList = await CustomOrders()
+
+
+
     const allTheHTML = `
         <h1>Cars 'R Us: Personal Car Builder</h1>
 
@@ -46,12 +52,12 @@ const render = async () => {
         </article>
 
         <article class="button">
-
+            ${orderButton}
         </article>
 
         <article class="customOrders">
-            <h2>Custom Car Orders</h2>
-
+            <h2 class="order-header">Custom Car Orders</h2>
+            ${customOrdersList}
         </article>
 
     `
@@ -60,3 +66,5 @@ const render = async () => {
 }
 
 render()
+
+document.addEventListener("newOrderPlaced", render)

@@ -1,10 +1,11 @@
+import { setTechnologyChoice } from "./TransientState.js"
 
 
 //create change event for technology package chosen
 const changeHandler = (changeEvent) => {
     if(changeEvent.target.id === "technologies") {
         const technologyIdChosen = parseInt(changeEvent.target.value)
-        console.log(technologyIdChosen)
+        setTechnologyChoice(technologyIdChosen)
     }
 }
 

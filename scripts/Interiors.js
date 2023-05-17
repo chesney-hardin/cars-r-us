@@ -1,10 +1,11 @@
+import { setInteriorChoice } from "./TransientState.js"
 
 
 //create event to capture interior choice
 const changeHandler= (changeEvent) => {
     if(changeEvent.target.id === "interiors") {
         const interiorIdChosen = changeEvent.target.value
-        console.log(parseInt(interiorIdChosen))
+        setInteriorChoice(parseInt(interiorIdChosen))
     }
 }
 

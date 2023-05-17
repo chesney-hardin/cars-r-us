@@ -1,10 +1,11 @@
+import { setPaintChoice } from "./TransientState.js"
 
 
 //create change event for capturing the paint option chosen
 const changeHandler = (changeEvent) => {
     if (changeEvent.target.id === "paints") {
         const paintIdChosen = changeEvent.target.value
-        console.log(parseInt(paintIdChosen))
+        setPaintChoice(parseInt(paintIdChosen))
     }
 }
 
