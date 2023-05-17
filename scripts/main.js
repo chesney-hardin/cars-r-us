@@ -4,6 +4,7 @@ Don't forget to classify functions as asyn and use keyowrd await when needed
 Will probably need to include event listeners to re-render the HTML when changes are made
 */
 
+import { Interiors } from "./Interiors.js"
 import { Paints } from "./Paints.js"
 
 const container = document.querySelector("#container")
@@ -13,6 +14,7 @@ const render = async () => {
     //paints drop down
     const paintsHTML = await Paints()
     //interior drop down
+    const interiorsHTML = await Interiors()
     //wheels drop down
     //technologies drop down
     //place order button
@@ -27,6 +29,7 @@ const render = async () => {
             </section>
             <section class="choices__interiors menu">
                 <h2>Interior</h2>
+                ${interiorsHTML}
             </section>
             <section class="choices__wheels menu">
                 <h2>Wheelss</h2>
